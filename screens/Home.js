@@ -1,9 +1,15 @@
 import React, { useContext, useState } from "react";
-import { Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Input } from "react-native-elements";
 
-import { AntDesign, Feather } from "@expo/vector-icons";
+import { AntDesign, Feather, FontAwesome5 } from "@expo/vector-icons";
 import { COLORS, SIZES, Categories } from "../constants";
 
 import { MainStackContext } from "../context/MainStackContext";
@@ -25,6 +31,14 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <View style={styles.profileIconView}>
+        <FontAwesome5
+          name="user-circle"
+          size={SIZES.icon * 1.6}
+          color="black"
+          onPress={() => navigation.push("Profile")}
+        />
+      </View>
       <Text style={styles.pageHeader}>I need help with</Text>
       <Input
         value={input}
@@ -86,6 +100,11 @@ const styles = StyleSheet.create({
   },
   pageHeader: { fontSize: SIZES.h1, marginTop: 50 },
   inputStyle: { fontSize: SIZES.font },
+  profileIconView: {
+    width: "100%",
+    alignItems: "flex-end",
+    marginTop: SIZES.padding,
+  },
 });
 
 export default Home;
