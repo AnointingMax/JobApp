@@ -28,6 +28,7 @@ export default TaskTile;
 
 const styles = StyleSheet.create({
   tileWrapper: {
+    backgroundColor: COLORS.white,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1,

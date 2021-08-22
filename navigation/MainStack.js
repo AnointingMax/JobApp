@@ -11,6 +11,7 @@ import JobDetails from "../screens/JobDetails";
 import WorkerList from "../screens/WorkerList";
 import WorkerDetail from "../screens/WorkerDetail";
 import Calendar from "../screens/Calendar";
+import Profile from "../screens/Profile";
 
 const Stack = createStackNavigator();
 
@@ -60,6 +61,13 @@ const MainStack = () => {
             <Stack.Screen
               name="Calendar"
               component={Calendar}
+              options={{
+                title: null,
+              }}
+            />
+            <Stack.Screen
+              name="Profile"
+              component={Profile}
               options={{
                 title: null,
               }}

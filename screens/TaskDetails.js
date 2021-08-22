@@ -18,7 +18,7 @@ const TaskDetails = ({ navigation, route }) => {
   const { task, setTasker } = useContext(RecentStackContext);
 
   return (
-    <View style={{ flex: 1, padding: SIZES.padding2 }}>
+    <View style={styles.safeArea}>
       <View style={{ marginVertical: 10 }}>
         <Text style={styles.sectionText}>Task Details</Text>
         <Text>
@@ -86,6 +86,11 @@ const TaskDetails = ({ navigation, route }) => {
 export default TaskDetails;
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    padding: SIZES.padding2,
+    backgroundColor: COLORS.lightGray,
+  },
   bottom: {
     flex: 1,
     justifyContent: "flex-end",

@@ -29,7 +29,7 @@ const WorkerList = ({ navigation }) => {
   };
 
   return (
-    <View style={{ flex: 1, paddingHorizontal: SIZES.padding2 }}>
+    <View style={styles.safeArea}>
       <WorkerListHeader
         input={input}
         setInput={setInput}
@@ -65,6 +65,11 @@ const WorkerList = ({ navigation }) => {
 export default WorkerList;
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    paddingHorizontal: SIZES.padding2,
+    backgroundColor: COLORS.lightGray,
+  },
   container: {
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },

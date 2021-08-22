@@ -6,9 +6,9 @@ import { FontAwesome5, AntDesign } from "@expo/vector-icons";
 import { COLORS, SIZES } from "../constants";
 
 import Home from "../screens/Home";
-import Profile from "../screens/Profile";
 
 import RecentStack from "./RecentStack";
+import ProfileStack from "./ProfileStack";
 
 Tab = createBottomTabNavigator();
 
@@ -54,7 +54,7 @@ const MainTab = () => {
 
       <Tab.Screen
         name="Profile"
-        component={Profile}
+        component={ProfileStack}
         options={{
           tabBarLabel: "Profile",
           tabBarIcon: ({ focused }) => (

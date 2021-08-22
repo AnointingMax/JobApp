@@ -77,7 +77,7 @@ const WorkerListHeader = ({ input, setInput, handleWorkerSearch }) => {
           ],
         }}
       >
-        <View>
+        <View style={{ paddingHorizontal: SIZES.padding2 }}>
           <TouchableOpacity style={styles.button}>
             <Text>Sort By Rating</Text>
           </TouchableOpacity>

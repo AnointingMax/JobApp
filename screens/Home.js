@@ -31,14 +31,6 @@ const Home = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.profileIconView}>
-        <FontAwesome5
-          name="user-circle"
-          size={SIZES.icon * 1.6}
-          color="black"
-          onPress={() => navigation.push("Profile")}
-        />
-      </View>
       <Text style={styles.pageHeader}>I need help with</Text>
       <Input
         value={input}
@@ -96,9 +88,10 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    paddingHorizontal: SIZES.padding,
+    paddingHorizontal: SIZES.padding2,
+    backgroundColor: COLORS.lightGray,
   },
-  pageHeader: { fontSize: SIZES.h1, marginTop: 50 },
+  pageHeader: { fontSize: SIZES.h1, marginTop: 60 },
   inputStyle: { fontSize: SIZES.font },
   profileIconView: {
     width: "100%",
