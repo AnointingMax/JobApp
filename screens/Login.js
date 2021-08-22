@@ -19,13 +19,7 @@ const Login = ({ navigation }) => {
   const [secureText, setSecureText] = useState(false);
 
   return (
-    <SafeAreaView
-      style={{
-        justifyContent: "center",
-        flex: 1,
-        paddingLeft: 20,
-      }}
-    >
+    <SafeAreaView style={styles.safeArea}>
       <KeyboardAvoidingView>
         <ScrollView>
           <View style={{ alignItems: "center" }}>
@@ -138,6 +132,12 @@ const Login = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  safeArea: {
+    justifyContent: "center",
+    flex: 1,
+    paddingLeft: 20,
+    backgroundColor: COLORS.lightGray,
+  },
   pageHeader: { fontSize: SIZES.h1, marginBottom: SIZES.padding2 },
   leftIconStyle: { marginRight: 5 },
   inputStyle: { fontSize: SIZES.body5 },

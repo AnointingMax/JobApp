@@ -6,9 +6,5 @@ import MainStack from "./navigation/MainStack";
 export default function App() {
   const [auth, setAuth] = useState(true);
 
-  if (!auth) {
-    return <UnauthorizedStack />;
-  } else {
-    return <MainStack />;
-  }
+  return auth ? <MainStack /> : <UnauthorizedStack />;
 }

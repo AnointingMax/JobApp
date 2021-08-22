@@ -6,7 +6,9 @@ import { MaterialIcons } from "@expo/vector-icons";
 
 const WorkerTile = ({ item, navigation, setTasker }) => {
   return (
-    <View>
+    <View
+      style={{ backgroundColor: COLORS.white, borderRadius: SIZES.base / 2 }}
+    >
       <View style={styles.dataView}>
         <Image
           source={require("../assets/images/plumbing.jpg")}
@@ -87,7 +89,8 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 50,
     backgroundColor: COLORS.primary,
-    borderRadius: SIZES.base / 2,
+    borderBottomLeftRadius: SIZES.base / 2,
+    borderBottomRightRadius: SIZES.base / 2,
     justifyContent: "center",
     alignItems: "center",
   },

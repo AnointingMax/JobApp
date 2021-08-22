@@ -28,13 +28,7 @@ const Register = ({ navigation }) => {
     useState(true);
 
   return (
-    <SafeAreaView
-      style={{
-        paddingTop: 35,
-        flex: 1,
-        paddingLeft: 20,
-      }}
-    >
+    <SafeAreaView style={styles.safeArea}>
       <KeyboardAvoidingView>
         <ScrollView>
           <View style={{ alignItems: "center" }}>
@@ -221,6 +215,13 @@ const Register = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    paddingLeft: 20,
+    backgroundColor: COLORS.lightGray,
+    paddingTop: 35,
+    paddingLeft: 20,
+  },
   pageHeader: { fontSize: SIZES.h1, marginBottom: SIZES.padding2 },
   leftIconStyle: { marginRight: 5 },
   inputStyle: { fontSize: SIZES.body5 },

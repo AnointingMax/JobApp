@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { StyleSheet, Text, Image, ScrollView, View } from "react-native";
-import { Button } from "react-native-elements";
 
 import { RecentStackContext } from "../context/RecentStackContext";
 import { COLORS, SIZES } from "../constants";
@@ -9,7 +8,7 @@ const TaskerDetails = ({ navigation }) => {
   const { tasker } = useContext(RecentStackContext);
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: COLORS.white }}>
       <ScrollView
         contentContainerStyle={styles.containerStyle}
         style={{ flexGrow: 1 }}

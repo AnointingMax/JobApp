@@ -9,7 +9,7 @@ const WorkerDetail = ({ navigation }) => {
   const { tasker } = useContext(MainStackContext);
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: COLORS.lightGray }}>
       <ScrollView
         contentContainerStyle={styles.containerStyle}
         style={{ flexGrow: 1 }}

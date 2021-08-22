@@ -27,6 +27,7 @@ const JobDetails = ({ navigation }) => {
       contentContainerStyle={{
         flexGrow: 1,
         paddingHorizontal: SIZES.padding2,
+        backgroundColor: COLORS.lightGray,
       }}
     >
       <View style={{ flex: 1 }}>
